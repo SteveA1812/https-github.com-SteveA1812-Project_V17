@@ -184,6 +184,20 @@ namespace Project_V17.Data.Migrations
                     b.ToTable("AspNetUserTokens");
                 });
 
+            modelBuilder.Entity("Project_V17.Models.Department", b =>
+                {
+                    b.Property<int>("DepID")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("DepartmentName")
+                        .IsRequired();
+
+                    b.HasKey("DepID");
+
+                    b.ToTable("Department");
+                });
+
             modelBuilder.Entity("Project_V17.Models.FSApp", b =>
                 {
                     b.Property<int>("AppID")
@@ -195,21 +209,28 @@ namespace Project_V17.Data.Migrations
                     b.Property<string>("CourseName")
                         .IsRequired();
 
-                    b.Property<string>("Department")
-                        .IsRequired();
+                    b.Property<int>("Department");
 
                     b.Property<string>("Details")
                         .IsRequired();
 
                     b.Property<int>("Duration");
 
+                    b.Property<bool>("FCS");
+
                     b.Property<string>("Function")
                         .IsRequired();
+
+                    b.Property<bool>("InnovationandResearch");
 
                     b.Property<int>("Level");
 
                     b.Property<string>("Mode")
                         .IsRequired();
+
+                    b.Property<bool>("Online");
+
+                    b.Property<bool>("PresidentsOffice");
 
                     b.Property<string>("Provider")
                         .IsRequired();
@@ -228,6 +249,14 @@ namespace Project_V17.Data.Migrations
 
                     b.Property<string>("Q5")
                         .IsRequired();
+
+                    b.Property<bool>("Registrars");
+
+                    b.Property<bool>("SchoolofBusiness");
+
+                    b.Property<bool>("SchoolofEngineering");
+
+                    b.Property<bool>("SchoolofScience");
 
                     b.Property<string>("StaffFirstName")
                         .IsRequired();

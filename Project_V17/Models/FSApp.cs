@@ -24,13 +24,13 @@ namespace Project_V17.Models
 
         [Required]
         [Display(Name = " Surname")]
-        [RegularExpression(@"[\w’-]{2,}", ErrorMessage = "The Surame must be at least two letters")]
+        [RegularExpression(@"[\w’-]{2,}", ErrorMessage = "The Surname must be at least two letters")]
         public string StaffSurname { get; set; } = "";
 
         [Required]
         [Display(Name = "Department")]
 
-        public string Department { get; set; } = "";
+        public int Department { get; set; } = 0;
 
         [Required]
         [Display(Name = "Function")]
@@ -117,5 +117,7 @@ namespace Project_V17.Models
 
         public string Q5 { get; set; } = "";
         #endregion
+
+      
     }
 }
