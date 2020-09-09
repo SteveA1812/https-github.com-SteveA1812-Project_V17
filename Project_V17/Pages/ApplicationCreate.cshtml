@@ -5,14 +5,17 @@
     ViewData["Title"] = "ApplicationCreate";
 }
 
-<h2>ApplicationCreate</h2>
+<h2>Further Study Application</h2>
 
-<h4>FSApp</h4>
+
 <hr />
 <div class="row">
     <div class="col-md-4">
         <form method="post">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+            <h1>Section 1</h1>
+            <h2>Staff Details</h2>
             <div class="form-group">
                 <label asp-for="FSApp.StaffFirstName" class="control-label"></label>
                 <input asp-for="FSApp.StaffFirstName" class="form-control" />
@@ -24,15 +27,23 @@
                 <span asp-validation-for="FSApp.StaffSurname" class="text-danger"></span>
             </div>
             <div class="form-group">
+                <P> Please enter the corrosponding number for your Department.</P>
+                <p>1 F&CS</p><p>2 Presidents Office</p><p>3 Registrars</p><p>4 School of Engineering</p>
+                <p>5 School of Science</p><p>6 School of Business </p><p>7 Online</p><p>8 Innovation and Research</p>
                 <label asp-for="FSApp.Department" class="control-label"></label>
                 <input asp-for="FSApp.Department" class="form-control" />
                 <span asp-validation-for="FSApp.Department" class="text-danger"></span>
             </div>
+
+
             <div class="form-group">
                 <label asp-for="FSApp.Function" class="control-label"></label>
                 <input asp-for="FSApp.Function" class="form-control" />
                 <span asp-validation-for="FSApp.Function" class="text-danger"></span>
             </div>
+
+            <h1>Section 2 </h1>
+            <h2>Course Details</h2>
             <div class="form-group">
                 <label asp-for="FSApp.CourseName" class="control-label"></label>
                 <input asp-for="FSApp.CourseName" class="form-control" />
@@ -73,6 +84,10 @@
                 <input asp-for="FSApp.Cost" class="form-control" />
                 <span asp-validation-for="FSApp.Cost" class="text-danger"></span>
             </div>
+
+
+            <h1>Section 3  </h1>
+            <h2>Supporting Information</h2>
             <div class="form-group">
                 <label asp-for="FSApp.Q1" class="control-label"></label>
                 <input asp-for="FSApp.Q1" class="form-control" />

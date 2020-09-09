@@ -7,6 +7,9 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Project_V17.Data;
 using Project_V17.Models;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.UI.Services;
+
 
 namespace Project_V17.Pages
 {
@@ -30,7 +33,7 @@ namespace Project_V17.Pages
 
         public async Task<IActionResult> OnPostAsync()
         {
-           
+          
             if (!ModelState.IsValid)
             {
                 return Page();
@@ -41,6 +44,8 @@ namespace Project_V17.Pages
             Message = $"Thank you, your application has now been created.  Your manager will review the application form and approve or deny. Once this has been completed all approved applications will be sent to the Executive for approval.";
             return RedirectToPage("Confirmation");
         }
+
        
+
     }
 }

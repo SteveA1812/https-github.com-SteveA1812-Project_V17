@@ -6,14 +6,23 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Pages\Applications\**" />
+    <Content Remove="Pages\Applications\**" />
+    <EmbeddedResource Remove="Pages\Applications\**" />
+    <None Remove="Pages\Applications\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.App" />
     <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.1.2" PrivateAssets="All" />
+    <PackageReference Include="Microsoft.IdentityModel.Protocol.Extensions" Version="1.0.4.403061554" />
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.1.9" />
   </ItemGroup>
 
   <ItemGroup>
     <Folder Include="Areas\Identity\Services\" />
-    <Folder Include="Pages\Applications\" />
+    <Folder Include="Pages\AdminPages\" />
+    <Folder Include="Pages\Manager Folder\" />
   </ItemGroup>
 
 </Project>
